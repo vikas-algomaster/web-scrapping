@@ -1,7 +1,7 @@
 {
   "name": "web_scrapping_5",
   "version": "1.0.0",
-  "description": "",
+  "description": "web_scrapping_activity",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.6"
+    "cheerio": "^1.0.0-rc.6",
+    "request": "^2.88.2"
   }
 }
