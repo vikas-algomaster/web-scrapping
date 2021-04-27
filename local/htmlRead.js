@@ -2,6 +2,7 @@ const fs = require('fs');
 const cheerio = require('cheerio');
 // console.log(cheerio);
 let htmldata = fs.readFileSync('./index.html');
+// console.log(htmldata+"");
 let ch = cheerio.load(htmldata);
 // console.log(ch.text());
 let h1data = ch('h1');
