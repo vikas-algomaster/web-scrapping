@@ -3,7 +3,7 @@ const fs = require("fs");
 console.log("Start");
 
 // async function 
-fs.readFile("./f1.txt" , giveMeData );
+fs.readFile("./file1.txt" , giveMeData );
 
 
 // sync function
