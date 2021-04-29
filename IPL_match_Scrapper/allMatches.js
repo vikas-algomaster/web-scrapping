@@ -12,6 +12,7 @@ function processData(html){
 //     // get links of all the matches !!1
     let ch = cheerio.load(html);
     let allATags = ch('a[data-hover="Scorecard"]');
+    // console.log(allATags.length);
     for(let i = 0; i < allATags.length; i++){
         let matchLink = "https://www.espncricinfo.com" + ch(allATags[i]).attr("href");
         getMatchDetails(matchLink);
