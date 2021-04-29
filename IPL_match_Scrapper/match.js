@@ -2,9 +2,11 @@ const cheerio = require("cheerio");
 const request = require("request");
 const fs = require("fs");
 
-request( "https://www.espncricinfo.com/series/ipl-2020-21-1210595/delhi-capitals-vs-mumbai-indians-final-1237181/full-scorecard" , function(err , response , data){
-    processData(data);
-})
+function getMatchDetails(link){
+    request( link , function(err , response , data){
+        processData(data);
+    });
+}
 
 function processData(html){
     let ch = cheerio.load(html);
@@ -32,6 +34,8 @@ function processData(html){
                 console.log(`Batsman = ${batsmanName} Runs = ${runs} Balls = ${balls} Fours = ${fours} Sixes = ${sixes}`);
             }
         }
-        console.log("###################################");
     }
+    console.log("###################################");
 }
+
+module.exports = getMatchDetails;
